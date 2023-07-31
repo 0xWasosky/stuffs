@@ -46,7 +46,7 @@ headers = {
 }
 
 
-def NglSpammer(num: int, timeout: int):
+def main(num: int, timeout: int) -> None:
     sent = 0
 
     while sent < num:
@@ -71,6 +71,6 @@ def NglSpammer(num: int, timeout: int):
 
 if __name__ == "__main__":
     for _ in range(parse.thread):
-        thread = threading.Thread(target=NglSpammer, args=(
+        thread = threading.Thread(target=main, args=(
             parse.request_number, parse.sleep,))
         thread.start()
