@@ -5,13 +5,8 @@ import hashlib
 
 from typing import Iterable
 
-t = time.time()
-
 with open("worlds.json", 'r') as f:
     worlds = json.loads(f.read())['worlds']
-
-te1 = time.time()
-print(f"Worlds loaded in {te1 - t}")
 
 def algorithm(worlds: Iterable = worlds) -> tuple:
     rand_number = 0
